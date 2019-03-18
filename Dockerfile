@@ -13,7 +13,7 @@ RUN apt-get install --yes \
     ruby
 
 # Install asciidoctor
-RUN gem install --pre \
+RUN gem install \
         asciidoctor \
         asciidoctor-pdf \
         rouge
