@@ -15,7 +15,6 @@ RUN apt-get install --yes \
 # Install asciidoctor
 RUN gem install \
         asciidoctor \
-        asciidoctor-pdf \
         rouge
 
 RUN mkdir -p /site
