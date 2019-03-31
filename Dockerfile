@@ -14,7 +14,7 @@ RUN apt-get install --yes \
 
 # Install asciidoctor
 RUN gem install \
-        asciidoctor \
+        asciidoctor:1.5.8 \
         asciidoctor-bibtex \
         rouge
 
