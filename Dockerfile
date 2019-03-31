@@ -15,7 +15,10 @@ RUN apt-get install --yes \
 # Install asciidoctor
 RUN gem install \
         asciidoctor \
+        asciidoctor-bibtex \
         rouge
+
+COPY usr/local/bin/asciidoctor /usr/local/bin/asciidoctor
 
 RUN mkdir -p /site
 

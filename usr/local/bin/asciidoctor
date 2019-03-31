@@ -1,0 +1,19 @@
+#!/usr/bin/ruby
+
+require 'rubygems' unless defined? Gem
+
+if File.exist?(asciidoctor = (File.expand_path '../../lib/asciidoctor', __FILE__))
+  require asciidoctor
+else
+  require 'asciidoctor'
+end
+require 'asciidoctor/cli'
+
+# Include extensions required for the compilation
+require 'asciidoctor-bibtex'
+
+invoker = Asciidoctor::Cli::Invoker.new ARGV
+GC.start
+invoker.invoke!
+exit invoker.code
+EOF
